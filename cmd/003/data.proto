@@ -1,0 +1,13 @@
+syntax = "proto3";
+package cel_sandbox;
+
+option go_package = "github.com/suzuito/sandbox-go/cmd/003/pb";
+
+message Data {
+    string org = 1;
+    map<string, Permission> permissions = 2;
+}
+
+message Permission {
+    repeated string buckets = 1;
+}
